@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Quiz</string>
+    <string name="ist_099_examination">IST 099 Examination</string>
+    <string name="united_states_international_university">United States International University</string>
+    <string name="usiu_logo">USIU logo</string>
+    <string name="name">Name</string>
+    <string name="id">ID</string>
+    <string name="student_id">Enter Your Student ID</string>
+    <string name="student_name">Enter Your Student Name</string>
 </resources>
