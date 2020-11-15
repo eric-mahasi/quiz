@@ -72,7 +72,7 @@
                 tools:text="Enter Your Student ID" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName"
+                android:id="@+id/editTextID"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:autofillHints=""
@@ -93,7 +93,7 @@
                 tools:text="Enter Your Student Name" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName2"
+                android:id="@+id/editTextName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:autofillHints=""
@@ -106,7 +106,7 @@
     </TableLayout>
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/buttonOkLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="162dp"
