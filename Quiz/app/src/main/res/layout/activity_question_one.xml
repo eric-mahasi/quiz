@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="1dp"
         android:gravity="center"
-        android:text="@string/ist_099_exam_question_1"
+        android:text="@string/header_1"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -52,7 +52,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/the_location_on_a_windows_operating_system_where_all_the_deleted_files_are_stored_is"
+            android:text="@string/question_1"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
     </LinearLayout>
 
@@ -69,25 +69,25 @@
             android:id="@+id/radioButtonA"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/a_my_computer" />
+            android:text="@string/my_computer" />
 
         <RadioButton
             android:id="@+id/radioButtonB"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/b_my_documents" />
+            android:text="@string/my_documents" />
 
         <RadioButton
             android:id="@+id/radioButtonC"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/c_the_recycle_bin" />
+            android:text="@string/the_recycle_bin" />
 
         <RadioButton
             android:id="@+id/radioButtonD"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/d_the_task_bar" />
+            android:text="@string/the_task_bar" />
     </RadioGroup>
 
     <LinearLayout
