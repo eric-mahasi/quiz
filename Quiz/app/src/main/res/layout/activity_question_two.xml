@@ -9,22 +9,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="1dp"
-        android:layout_marginBottom="711dp"
         android:text="@string/ist_099_exam_question_2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.046" />
 
     <View
         android:id="@+id/divider"
         android:layout_width="409dp"
         android:layout_height="10dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginLeft="1dp"
-        android:layout_marginBottom="692dp"
+        android:layout_marginBottom="668dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -32,7 +29,7 @@
     <LinearLayout
         android:layout_width="409dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="592dp"
+        android:layout_marginBottom="476dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -55,9 +52,9 @@
     <RadioGroup
         android:layout_width="214dp"
         android:layout_height="160dp"
-        android:layout_marginEnd="144dp"
-        android:layout_marginRight="144dp"
-        android:layout_marginBottom="336dp"
+        android:layout_marginEnd="152dp"
+        android:layout_marginRight="152dp"
+        android:layout_marginBottom="236dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
@@ -90,14 +87,13 @@
         style="?android:attr/buttonBarButtonStyle"
         android:layout_width="407dp"
         android:layout_height="0dp"
-        android:layout_marginStart="3dp"
-        android:layout_marginLeft="3dp"
         android:layout_marginEnd="3dp"
         android:layout_marginRight="3dp"
-        android:layout_marginBottom="197dp"
+        android:layout_marginBottom="76dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
@@ -125,5 +121,4 @@
             android:text="@string/next" />
 
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
