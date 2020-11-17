@@ -11,7 +11,7 @@ public class QuestionFiveActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_question_four);
+        setContentView(R.layout.activity_question_five);
         Intent intent = getIntent();
         Button previousButton = (Button) findViewById(R.id.buttonPrevious);
         Button homeButton = (Button) findViewById(R.id.buttonHome);

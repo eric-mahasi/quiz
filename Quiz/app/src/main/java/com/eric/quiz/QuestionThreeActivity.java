@@ -35,7 +35,7 @@ public class QuestionThreeActivity extends AppCompatActivity {
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(QuestionThreeActivity.this, QuestionThreeActivity.class);
+                Intent intent = new Intent(QuestionThreeActivity.this, QuestionFourActivity.class);
                 startActivity(intent);
             }
         });

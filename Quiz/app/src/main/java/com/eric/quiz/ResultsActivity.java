@@ -11,7 +11,7 @@ public class ResultsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_question_four);
+        setContentView(R.layout.activity_results);
         Intent intent = getIntent();
         Button homeButton = (Button) findViewById(R.id.buttonHome);
         homeButton.setOnClickListener(new View.OnClickListener() {
