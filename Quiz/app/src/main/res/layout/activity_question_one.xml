@@ -91,6 +91,7 @@
     </RadioGroup>
 
     <LinearLayout
+        android:id="@+id/linearLayout3"
         style="?android:attr/buttonBarButtonStyle"
         android:layout_width="407dp"
         android:layout_height="0dp"
