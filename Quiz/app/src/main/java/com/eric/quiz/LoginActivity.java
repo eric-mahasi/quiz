@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,11 +14,21 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        login();
+    }
+
+    public void login() {
+        EditText idEditText = (EditText) findViewById(R.id.editTextID);
+        EditText nameEditText = (EditText) findViewById(R.id.editTextName);
+//        idEditText.getText();
+//        nameEditText.getText();
+        final String[] myArr = {String.valueOf(idEditText.getText()), String.valueOf(nameEditText.getText())};
         Button loginButton = (Button) findViewById(R.id.buttonOkLogin);
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(LoginActivity.this, QuestionOneActivity.class);
+                intent.putExtra("myArr", myArr);
                 startActivity(intent);
             }
         });

@@ -12,6 +12,14 @@ public class QuestionOneActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question_one);
+
+        Bundle extras = getIntent().getExtras();
+        // Extract the array from the Bundle object
+        if (extras != null) {
+            String[] myArr = extras.getStringArray("myArr");
+        }
+        // Output the array
+
         Button previousButton = (Button) findViewById(R.id.buttonPrevious);
         Button homeButton = (Button) findViewById(R.id.buttonHome);
         Button nextButton = (Button) findViewById(R.id.buttonNext);
