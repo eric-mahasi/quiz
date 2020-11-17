@@ -78,7 +78,7 @@
                 android:autofillHints=""
                 android:ems="10"
                 android:hint="@string/id"
-                android:inputType="textPersonName" />
+                android:inputType="text" />
         </TableRow>
 
         <TableRow
