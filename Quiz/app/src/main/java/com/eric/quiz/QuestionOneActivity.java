@@ -44,6 +44,7 @@ public class QuestionOneActivity extends AppCompatActivity {
                 RadioButton radioButtonB = findViewById(R.id.radioButtonB);
                 RadioButton radioButtonC = findViewById(R.id.radioButtonC);
                 RadioButton radioButtonD = findViewById(R.id.radioButtonD);
+                int notDone = 0;
                 if (myList != null) {
                     if (radioButtonA.isChecked()) {
                         myList.add("A");
@@ -53,11 +54,14 @@ public class QuestionOneActivity extends AppCompatActivity {
                         myList.add("C");
                     } else if (radioButtonD.isChecked()) {
                         myList.add("D");
+                    } else {
+                        notDone = 1;
                     }
                 }
                 System.out.println(myList);
                 Intent intent = new Intent(QuestionOneActivity.this, QuestionTwoActivity.class);
                 intent.putExtra("key", myList);
+                intent.putExtra("not done", notDone);
                 startActivity(intent);
             }
         });

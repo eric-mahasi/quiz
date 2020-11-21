@@ -17,6 +17,7 @@ public class QuestionFiveActivity extends AppCompatActivity {
         setContentView(R.layout.activity_question_five);
         final ArrayList<String> myList = (ArrayList<String>) getIntent().getSerializableExtra("key");
         System.out.println(myList);
+        final Intent intent = getIntent();
         Button previousButton = (Button) findViewById(R.id.buttonPrevious);
         Button homeButton = (Button) findViewById(R.id.buttonHome);
         Button nextButton = (Button) findViewById(R.id.buttonNext);
@@ -43,6 +44,7 @@ public class QuestionFiveActivity extends AppCompatActivity {
                 RadioButton radioButtonB = findViewById(R.id.radioButtonB);
                 RadioButton radioButtonC = findViewById(R.id.radioButtonC);
                 RadioButton radioButtonD = findViewById(R.id.radioButtonD);
+                int notDone = intent.getIntExtra("not done", 0);
                 if (myList != null) {
                     if (radioButtonA.isChecked()) {
                         myList.add("A");
@@ -52,10 +54,14 @@ public class QuestionFiveActivity extends AppCompatActivity {
                         myList.add("C");
                     } else if (radioButtonD.isChecked()) {
                         myList.add("D");
+                    } else {
+                        notDone++;
                     }
                 }
+                System.out.println(notDone);
                 Intent intent = new Intent(QuestionFiveActivity.this, ResultsActivity.class);
                 intent.putExtra("key", myList);
+                intent.putExtra("not done", notDone);
                 startActivity(intent);
             }
         });
