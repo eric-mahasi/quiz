@@ -74,7 +74,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView7"
+                android:id="@+id/textViewID"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </TableRow>
@@ -91,7 +91,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView11"
+                android:id="@+id/textViewName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </TableRow>
@@ -108,7 +108,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView13"
+                android:id="@+id/textViewResults"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </TableRow>
@@ -124,7 +124,7 @@
                 android:text="@string/questions_attempted" />
 
             <TextView
-                android:id="@+id/textView15"
+                android:id="@+id/textViewAttempted"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </TableRow>
@@ -140,7 +140,7 @@
                 android:text="@string/questions_failed" />
 
             <TextView
-                android:id="@+id/textView17"
+                android:id="@+id/textViewFailed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </TableRow>
@@ -156,7 +156,7 @@
                 android:text="@string/questions_not_attempted" />
 
             <TextView
-                android:id="@+id/textView19"
+                android:id="@+id/textViewNotAttempted"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </TableRow>
