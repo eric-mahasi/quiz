@@ -4,25 +4,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioButton;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.ArrayList;
 
 public class QuestionOneActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question_one);
-
-        Bundle extras = getIntent().getExtras();
-        // Extract the array from the Bundle object
-        String[] myArr = new String[0];
-        if (extras != null) {
-            myArr = extras.getStringArray("myArr");
-        }
-        // Output the array
-        if (myArr != null) {
-            System.out.println(myArr[0]);
-        }
+        final ArrayList<String> myList = (ArrayList<String>) getIntent().getSerializableExtra("key");
+        System.out.println(myList);
         Button previousButton = (Button) findViewById(R.id.buttonPrevious);
         Button homeButton = (Button) findViewById(R.id.buttonHome);
         Button nextButton = (Button) findViewById(R.id.buttonNext);
@@ -42,10 +36,27 @@ public class QuestionOneActivity extends AppCompatActivity {
             }
         });
 
+
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(QuestionOneActivity.this, QuestionTwoActivity.class);
+                RadioButton radioButtonA = findViewById(R.id.radioButtonA);
+                RadioButton radioButtonB = findViewById(R.id.radioButtonB);
+                RadioButton radioButtonC = findViewById(R.id.radioButtonC);
+                RadioButton radioButtonD = findViewById(R.id.radioButtonD);
+                if (myList != null) {
+                    if (radioButtonA.isChecked()) {
+                        myList.add("A");
+                    } else if (radioButtonB.isChecked()) {
+                        myList.add("B");
+                    } else if (radioButtonC.isChecked()) {
+                        myList.add("C");
+                    } else if (radioButtonD.isChecked()) {
+                        myList.add("D");
+                    }
+                }
+                System.out.println(myList);
                 startActivity(intent);
             }
         });

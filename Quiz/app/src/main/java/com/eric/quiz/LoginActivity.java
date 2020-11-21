@@ -8,6 +8,8 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
+
 public class LoginActivity extends AppCompatActivity {
 
     @Override
@@ -24,9 +26,11 @@ public class LoginActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ArrayList<String> myList = new ArrayList<>();
+                myList.add(String.valueOf(idEditText.getText()));
+                myList.add(String.valueOf(nameEditText.getText()));
                 Intent intent = new Intent(LoginActivity.this, QuestionOneActivity.class);
-                final String[] myArr = {String.valueOf(idEditText.getText()), String.valueOf(nameEditText.getText())};
-                intent.putExtra("myArr", myArr);
+                intent.putExtra("key", myList);
                 startActivity(intent);
             }
         });
