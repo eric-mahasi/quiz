@@ -13,6 +13,9 @@ public class ResultsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_results);
         Intent intent = getIntent();
+        int notDone = intent.getIntExtra("not done", 0);
+        int done = 5 - notDone;
+        System.out.println(done);
         Button homeButton = (Button) findViewById(R.id.buttonHome);
         homeButton.setOnClickListener(new View.OnClickListener() {
             @Override
