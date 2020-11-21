@@ -2,9 +2,11 @@ package com.eric.quiz;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.telephony.SmsManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -33,10 +35,8 @@ public class ResultsActivity extends AppCompatActivity {
         textViewAttempted.setText(Integer.toString(done));
         textViewNotAttempted.setText(Integer.toString(notDone));
 
-        if (myList != null) {
-            myList.remove(0);
-            myList.remove(0);
-        }
+        myList.remove(0);
+        myList.remove(0);
         String[] resultsArray;
         resultsArray = new String[]{"C", "B", "D", "C", "D"};
         int failed = 0;
@@ -47,7 +47,7 @@ public class ResultsActivity extends AppCompatActivity {
         }
         int result = 5 - failed;
         textViewFailed.setText(Integer.toString(failed));
-        textViewResults.setText(result + "/" + 5);
+        textViewResults.setText(String.format("%d/%d", result, 5));
         System.out.println(myList);
         System.out.println(failed);
         Button homeButton = (Button) findViewById(R.id.buttonHome);
@@ -58,5 +58,18 @@ public class ResultsActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+        String phoneNo = "+254735000330";
+        String message = "Student ID: " + id + " Student Name: " + name + " scored: " + result + "/" + 5 + "\nQuestions Attempted: " + done + "\nQuestions Failed: " + failed + "\nQuestions not attempted: " + notDone;
+        try {
+            SmsManager smsManager = SmsManager.getDefault();
+            smsManager.sendTextMessage(phoneNo, null, message, null, null);
+            Toast.makeText(getApplicationContext(), "SMS sent.",
+                    Toast.LENGTH_LONG).show();
+        } catch (Exception e) {
+            Toast.makeText(getApplicationContext(), "SMS failed, please try again.", Toast.LENGTH_LONG).show();
+        }
     }
+
 }
