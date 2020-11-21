@@ -40,7 +40,6 @@ public class QuestionOneActivity extends AppCompatActivity {
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(QuestionOneActivity.this, QuestionTwoActivity.class);
                 RadioButton radioButtonA = findViewById(R.id.radioButtonA);
                 RadioButton radioButtonB = findViewById(R.id.radioButtonB);
                 RadioButton radioButtonC = findViewById(R.id.radioButtonC);
@@ -57,6 +56,8 @@ public class QuestionOneActivity extends AppCompatActivity {
                     }
                 }
                 System.out.println(myList);
+                Intent intent = new Intent(QuestionOneActivity.this, QuestionTwoActivity.class);
+                intent.putExtra("key", myList);
                 startActivity(intent);
             }
         });
