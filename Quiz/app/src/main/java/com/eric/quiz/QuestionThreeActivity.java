@@ -55,6 +55,7 @@ public class QuestionThreeActivity extends AppCompatActivity {
                     } else if (radioButtonD.isChecked()) {
                         myList.add("D");
                     } else {
+                        myList.add("N");
                         notDone++;
                     }
                 }

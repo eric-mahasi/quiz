@@ -55,10 +55,12 @@ public class QuestionFiveActivity extends AppCompatActivity {
                     } else if (radioButtonD.isChecked()) {
                         myList.add("D");
                     } else {
+                        myList.add("N");
                         notDone++;
                     }
                 }
                 System.out.println(notDone);
+                System.out.println(myList);
                 Intent intent = new Intent(QuestionFiveActivity.this, ResultsActivity.class);
                 intent.putExtra("key", myList);
                 intent.putExtra("not done", notDone);
