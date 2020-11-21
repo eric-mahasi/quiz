@@ -15,11 +15,14 @@ public class QuestionOneActivity extends AppCompatActivity {
 
         Bundle extras = getIntent().getExtras();
         // Extract the array from the Bundle object
+        String[] myArr = new String[0];
         if (extras != null) {
-            String[] myArr = extras.getStringArray("myArr");
+            myArr = extras.getStringArray("myArr");
         }
         // Output the array
-
+        if (myArr != null) {
+            System.out.println(myArr[0]);
+        }
         Button previousButton = (Button) findViewById(R.id.buttonPrevious);
         Button homeButton = (Button) findViewById(R.id.buttonHome);
         Button nextButton = (Button) findViewById(R.id.buttonNext);

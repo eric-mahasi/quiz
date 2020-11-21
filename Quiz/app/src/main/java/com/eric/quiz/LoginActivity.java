@@ -18,16 +18,14 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void login() {
-        EditText idEditText = (EditText) findViewById(R.id.editTextID);
-        EditText nameEditText = (EditText) findViewById(R.id.editTextName);
-//        idEditText.getText();
-//        nameEditText.getText();
-        final String[] myArr = {String.valueOf(idEditText.getText()), String.valueOf(nameEditText.getText())};
+        final EditText idEditText = (EditText) findViewById(R.id.editTextID);
+        final EditText nameEditText = (EditText) findViewById(R.id.editTextName);
         Button loginButton = (Button) findViewById(R.id.buttonOkLogin);
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(LoginActivity.this, QuestionOneActivity.class);
+                final String[] myArr = {String.valueOf(idEditText.getText()), String.valueOf(nameEditText.getText())};
                 intent.putExtra("myArr", myArr);
                 startActivity(intent);
             }
