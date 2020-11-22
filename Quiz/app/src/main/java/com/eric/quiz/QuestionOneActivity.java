@@ -16,10 +16,9 @@ public class QuestionOneActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question_one);
         final ArrayList<String> myList = (ArrayList<String>) getIntent().getSerializableExtra("key");
-        System.out.println(myList);
-        Button previousButton = (Button) findViewById(R.id.buttonPrevious);
-        Button homeButton = (Button) findViewById(R.id.buttonHome);
-        Button nextButton = (Button) findViewById(R.id.buttonNext);
+        Button previousButton = findViewById(R.id.buttonPrevious);
+        Button homeButton = findViewById(R.id.buttonHome);
+        Button nextButton = findViewById(R.id.buttonNext);
         previousButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,6 +54,8 @@ public class QuestionOneActivity extends AppCompatActivity {
                     } else if (radioButtonD.isChecked()) {
                         myList.add("D");
                     } else {
+                        // If none of the radio buttons is checked, insert N into the ArrayList to
+                        // represent N/A and set the number of questions not done to 1
                         myList.add("N");
                         notDone = 1;
                     }

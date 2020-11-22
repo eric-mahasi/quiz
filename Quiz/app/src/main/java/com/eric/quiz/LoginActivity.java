@@ -20,12 +20,13 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void login() {
-        final EditText idEditText = (EditText) findViewById(R.id.editTextID);
-        final EditText nameEditText = (EditText) findViewById(R.id.editTextName);
-        Button loginButton = (Button) findViewById(R.id.buttonOkLogin);
+        final EditText idEditText = findViewById(R.id.editTextID);
+        final EditText nameEditText = findViewById(R.id.editTextName);
+        Button loginButton = findViewById(R.id.buttonOkLogin);
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // This ArrayList will store all the data we're interested in
                 ArrayList<String> myList = new ArrayList<>();
                 myList.add(String.valueOf(idEditText.getText()));
                 myList.add(String.valueOf(nameEditText.getText()));

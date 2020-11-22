@@ -16,11 +16,10 @@ public class QuestionFiveActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question_five);
         final ArrayList<String> myList = (ArrayList<String>) getIntent().getSerializableExtra("key");
-        System.out.println(myList);
         final Intent intent = getIntent();
-        Button previousButton = (Button) findViewById(R.id.buttonPrevious);
-        Button homeButton = (Button) findViewById(R.id.buttonHome);
-        Button nextButton = (Button) findViewById(R.id.buttonNext);
+        Button previousButton = findViewById(R.id.buttonPrevious);
+        Button homeButton = findViewById(R.id.buttonHome);
+        Button nextButton = findViewById(R.id.buttonNext);
         previousButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,8 +58,6 @@ public class QuestionFiveActivity extends AppCompatActivity {
                         notDone++;
                     }
                 }
-                System.out.println(notDone);
-                System.out.println(myList);
                 Intent intent = new Intent(QuestionFiveActivity.this, ResultsActivity.class);
                 intent.putExtra("key", myList);
                 intent.putExtra("not done", notDone);

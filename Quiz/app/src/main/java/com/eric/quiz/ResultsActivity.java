@@ -20,6 +20,8 @@ public class ResultsActivity extends AppCompatActivity {
         final ArrayList<String> myList = (ArrayList<String>) getIntent().getSerializableExtra("key");
         Intent intent = getIntent();
         int notDone = intent.getIntExtra("not done", 0);
+        // Number of questions done is got by subtracting the number of questions not done from
+        // the total number of questions
         int done = 5 - notDone;
         TextView textViewId = findViewById(R.id.textViewID);
         TextView textViewName = findViewById(R.id.textViewName);
@@ -35,22 +37,22 @@ public class ResultsActivity extends AppCompatActivity {
         textViewAttempted.setText(Integer.toString(done));
         textViewNotAttempted.setText(Integer.toString(notDone));
 
+        // Remove id and name from ArrayList
         myList.remove(0);
         myList.remove(0);
-        String[] resultsArray;
-        resultsArray = new String[]{"C", "B", "D", "C", "D"};
+        String[] correctAnswers;
+        correctAnswers = new String[]{"C", "B", "D", "C", "D"};
         int failed = 0;
-        for (int i = 0; i < resultsArray.length; i++) {
-            if (!myList.get(i).equals(resultsArray[i])) {
+        // Compare the submitted answers to the correct answers
+        for (int i = 0; i < correctAnswers.length; i++) {
+            if (!myList.get(i).equals(correctAnswers[i])) {
                 failed++;
             }
         }
         int result = 5 - failed;
         textViewFailed.setText(Integer.toString(failed));
         textViewResults.setText(String.format("%d/%d", result, 5));
-        System.out.println(myList);
-        System.out.println(failed);
-        Button homeButton = (Button) findViewById(R.id.buttonHome);
+        Button homeButton = findViewById(R.id.buttonHome);
         homeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,7 +61,7 @@ public class ResultsActivity extends AppCompatActivity {
             }
         });
 
-
+        // Send all the results to the lecturer's number
         String phoneNo = "+254735000330";
         String message = "Student ID: " + id + " Student Name: " + name + " scored: " + result + "/" + 5 + "\nQuestions Attempted: " + done + "\nQuestions Failed: " + failed + "\nQuestions not attempted: " + notDone;
         try {
@@ -71,5 +73,4 @@ public class ResultsActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "SMS failed, please try again.", Toast.LENGTH_LONG).show();
         }
     }
-
 }
