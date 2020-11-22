@@ -32,6 +32,7 @@
             android:id="@+id/textView5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="@string/united_states_international_university"
             app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
@@ -39,6 +40,7 @@
             android:id="@+id/textView6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="@string/ist_099_examination"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textStyle="bold" />
@@ -78,7 +80,7 @@
                 android:autofillHints=""
                 android:ems="10"
                 android:hint="@string/id"
-                android:inputType="text" />
+                android:inputType="numberDecimal" />
         </TableRow>
 
         <TableRow
