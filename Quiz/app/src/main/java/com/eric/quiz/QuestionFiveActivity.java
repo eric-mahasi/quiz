@@ -19,7 +19,7 @@ public class QuestionFiveActivity extends AppCompatActivity {
         final Intent intent = getIntent();
         Button previousButton = findViewById(R.id.buttonPrevious);
         Button homeButton = findViewById(R.id.buttonHome);
-        Button nextButton = findViewById(R.id.buttonNext);
+        Button submitButton = findViewById(R.id.buttonSubmit);
         previousButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,7 +36,7 @@ public class QuestionFiveActivity extends AppCompatActivity {
             }
         });
 
-        nextButton.setOnClickListener(new View.OnClickListener() {
+        submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 RadioButton radioButtonA = findViewById(R.id.radioButtonA);
